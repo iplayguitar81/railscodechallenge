@@ -1,0 +1,65 @@
+<%= form_for(@auction) do |f| %>
+  <% if @auction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this auction from being saved:</h2>
+
+      <ul>
+      <% @auction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :auction_name %><br>
+    <%= f.text_field :auction_name %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address %><br>
+    <%= f.text_field :street_address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_year %><br>
+    <%= f.number_field :vehicle_year %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_make %><br>
+    <%= f.text_field :vehicle_make %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_model %><br>
+    <%= f.text_field :vehicle_model %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_stock_number %><br>
+    <%= f.number_field :vehicle_stock_number %>
+  </div>
+  <div class="field">
+    <%= f.label :winning_bid %><br>
+    <%= f.text_field :winning_bid %>
+  </div>
+  <div class="field">
+    <%= f.label :seller_payout %><br>
+    <%= f.text_field :seller_payout %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

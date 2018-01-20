@@ -1,0 +1,65 @@
+<h1>Listing auctions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Auction name</th>
+      <th>Street address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Vehicle year</th>
+      <th>Vehicle make</th>
+      <th>Vehicle model</th>
+      <th>Vehicle stock number</th>
+      <th>Winning bid</th>
+      <th>Seller payout</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @auctions.each do |auction| %>
+      <tr>
+        <td><%= auction.auction_name %></td>
+        <td><%= auction.street_address %></td>
+        <td><%= auction.city %></td>
+        <td><%= auction.state %></td>
+        <td><%= auction.zip %></td>
+        <td><%= auction.vehicle_year %></td>
+        <td><%= auction.vehicle_make %></td>
+        <td><%= auction.vehicle_model %></td>
+        <td><%= auction.vehicle_stock_number %></td>
+        <td><%= auction.winning_bid.round(2) %></td>
+        <td><%= auction.seller_payout.round(2) %></td>
+        <td><%= auction.description %></td>
+        <td><%= link_to 'Show', auction %></td>
+        <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
+        <td><%= link_to 'Destroy', auction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= auction_details %>
+
+<h3>Import Auction Sales</h3>
+<br>
+<br>
+
+<%= form_tag  import_auctions_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <br>
+  <br>
+
+  <%= submit_tag "Upload Auction Results", class: "uk-button uk-button-mini" %>
+
+<% end %>
+<br>
+
+<!--<%= link_to 'New Auction', new_auction_path %>-->

@@ -1,0 +1,1 @@
+json.extract! @auction, :id, :auction_name, :street_address, :city, :state, :zip, :vehicle_year, :vehicle_make, :vehicle_model, :vehicle_stock_number, :winning_bid, :seller_payout, :description, :created_at, :updated_at

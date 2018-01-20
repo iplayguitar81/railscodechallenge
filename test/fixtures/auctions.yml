@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  auction_name: MyString
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  vehicle_year: 1
+  vehicle_make: MyString
+  vehicle_model: MyString
+  vehicle_stock_number: 1
+  winning_bid: 9.99
+  seller_payout: 9.99
+  description: MyString
+
+two:
+  auction_name: MyString
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  vehicle_year: 1
+  vehicle_make: MyString
+  vehicle_model: MyString
+  vehicle_stock_number: 1
+  winning_bid: 9.99
+  seller_payout: 9.99
+  description: MyString

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Auction name:</strong>
+  <%= @auction.auction_name %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @auction.street_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @auction.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @auction.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @auction.zip %>
+</p>
+
+<p>
+  <strong>Vehicle year:</strong>
+  <%= @auction.vehicle_year %>
+</p>
+
+<p>
+  <strong>Vehicle make:</strong>
+  <%= @auction.vehicle_make %>
+</p>
+
+<p>
+  <strong>Vehicle model:</strong>
+  <%= @auction.vehicle_model %>
+</p>
+
+<p>
+  <strong>Vehicle stock number:</strong>
+  <%= @auction.vehicle_stock_number %>
+</p>
+
+<p>
+  <strong>Winning bid:</strong>
+  <%= @auction.winning_bid %>
+</p>
+
+<p>
+  <strong>Seller payout:</strong>
+  <%= @auction.seller_payout %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @auction.description %>
+</p>
+
+<%= link_to 'Edit', edit_auction_path(@auction) %> |
+<%= link_to 'Back', auctions_path %>
