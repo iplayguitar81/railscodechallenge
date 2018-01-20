@@ -33,8 +33,8 @@
         <td><%= auction.vehicle_make %></td>
         <td><%= auction.vehicle_model %></td>
         <td><%= auction.vehicle_stock_number %></td>
-        <td><%= auction.winning_bid.round(2) %></td>
-        <td><%= auction.seller_payout.round(2) %></td>
+        <td><%= auction.winning_bid %></td>
+        <td><%= auction.seller_payout %></td>
         <td><%= auction.description %></td>
         <td><%= link_to 'Show', auction %></td>
         <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
