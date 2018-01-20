@@ -44,7 +44,7 @@ module AuctionsHelper
 
 
   #store data/calculations for particular auction into return string:
-  auction_detail += "<b>Auction Name:</b> #{auction} <b>City:</b> #{city} <b>Auction Summed Sales:</b> #{currency(winning_bid_total)} <b>Auction Summed Seller Payout: </b> #{currency(seller_payout_total)} <b> # of Vehicles sold:</b> #{sales_count}<b> Profit: </b> #{currency(profit)} <b>Average Profit:</b>#{currency(average_profit)}<br/>"
+  auction_detail += "<b>Auction Name:</b> #{auction} <b>City:</b> #{city} <b>Auction Summed Winning Bid:</b> #{currency(winning_bid_total)} <b>Auction Summed Seller Payout: </b> #{currency(seller_payout_total)} <b> # of Vehicles sold:</b> #{sales_count}<b> Profit: </b> #{currency(profit)} <b>Average Profit:</b>#{currency(average_profit)}<br/>"
 
               end
 
