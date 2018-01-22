@@ -39,15 +39,13 @@ module AuctionsHelper
       #calculate average profit based on sum profit/ count of sales:
       average_profit = (profit / sales_count).round(2)
 
-
       #store data/calculations for particular auction into return string:
-      auction_detail += "<b>Auction Name:</b> #{auction} <b>City:</b> #{auction_city} <b>Auction Summed Winning Bid:</b> #{money(winning_bid_total)} <b>Auction Summed Seller Payout: </b> #{money(seller_payout_total)} <b> # of Vehicles sold:</b> #{sales_count}<b> Profit: </b> #{money(profit)} <b>Average Profit:</b>#{money(average_profit)}<br/>"
-
+      auction_detail += "<div class='card col-md-11 col-md-offset-1 text-center' style='margin-top:1em;margin-left:auto;margin-right:auto;'> <div class='card-header text-white bg-success'> <b>Auction Name:</b> #{auction}<br><b>City:</b> #{auction_city} </div> <div class='card-block'> <blockquote class='card-blockquote'> <p><b>Auction Summed Winning Bid:</b> #{money(winning_bid_total)}</p><p><b>Auction Summed Seller Payout: </b> #{money(seller_payout_total)}</p><p><b> # of Vehicles sold:</b> #{sales_count}</p><p><b> Profit: </b> #{money(profit)}</p> <footer><p> <cite title='Average Profit'><b>Average Profit:</b> #{money(average_profit)}</p></cite></footer> </blockquote> </div> </div><br>"
 
     end
-
+    summary_header = "<h1 class='text-center font-weight-bold' style='margin-left:auto;margin-right:auto;'>Auction Results Summary</h1><br>"
     #return the return string calling HTML safe for neat display :)
-    return auction_detail.html_safe
+    return summary_header.html_safe + auction_detail.html_safe
 
 
   end
