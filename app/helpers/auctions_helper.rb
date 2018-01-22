@@ -44,6 +44,7 @@ module AuctionsHelper
 
     end
     summary_header = "<h1 class='text-center font-weight-bold' style='margin-left:auto;margin-right:auto;'>Auction Results Summary</h1><br>"
+
     #return the return string calling HTML safe for neat display :)
     return summary_header.html_safe + auction_detail.html_safe
 
