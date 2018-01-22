@@ -1,8 +1,9 @@
-<h1>Listing auctions</h1>
+<h1 class="text-center">List Auction Results</h1>
 
-<table>
+
+<table class="table table-responsive table-sm table-bordered table-hover">
   <thead>
-    <tr>
+    <tr class="table-success">
       <th>Auction name</th>
       <th>Street address</th>
       <th>City</th>
@@ -44,21 +45,25 @@
   </tbody>
 </table>
 
-<br>
-<%= auction_details %>
-<br/>
-<h3>Import Auction Sales</h3>
+
+<h3 class="text-center">Import Auction Sales</h3>
 <br>
 <br>
 
-<%= form_tag  import_auctions_path, multipart: true do %>
+<%= form_tag  import_auctions_path, multipart: true, class: 'text-center' do %>
   <%= file_field_tag :file %>
   <br>
   <br>
 
-  <%= submit_tag "Upload Auction Results", class: "uk-button uk-button-mini" %>
+  <%= submit_tag "Upload Auction Results", class: "btn btn-md btn-success" %>
 
 <% end %>
 <br>
+<div class="container">
+    <div class="row">
+<%= auction_details %>
+    </div>
+  </div>
+  <br/>
 
 <!--<%= link_to 'New Auction', new_auction_path %>-->
