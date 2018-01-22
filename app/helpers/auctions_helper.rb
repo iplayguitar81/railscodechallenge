@@ -22,7 +22,7 @@ module AuctionsHelper
       auction_name = Auction.where(auction_name: auction)
 
       #select individual auction based on iterated auction_name to grab city from DB query:
-      auction_where = Auction.where(auction_name: auction).first
+      auction_city = Auction.where(auction_name: auction).uniq.pluck(:city).first
 
       #number of vehicles sold counting by winning_bid column:
       sales_count = auction_name.count('winning_bid')
@@ -41,7 +41,7 @@ module AuctionsHelper
 
 
       #store data/calculations for particular auction into return string:
-      auction_detail += "<b>Auction Name:</b> #{auction} <b>City:</b> #{auction_where.city} <b>Auction Summed Winning Bid:</b> #{money(winning_bid_total)} <b>Auction Summed Seller Payout: </b> #{money(seller_payout_total)} <b> # of Vehicles sold:</b> #{sales_count}<b> Profit: </b> #{money(profit)} <b>Average Profit:</b>#{money(average_profit)}<br/>"
+      auction_detail += "<b>Auction Name:</b> #{auction} <b>City:</b> #{auction_city} <b>Auction Summed Winning Bid:</b> #{money(winning_bid_total)} <b>Auction Summed Seller Payout: </b> #{money(seller_payout_total)} <b> # of Vehicles sold:</b> #{sales_count}<b> Profit: </b> #{money(profit)} <b>Average Profit:</b>#{money(average_profit)}<br/>"
 
 
     end
